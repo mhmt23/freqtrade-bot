@@ -1,6 +1,9 @@
 # Freqtrade Bot - Sunucu Deployment
 
+🤖 **OTOMATIK DEPLOYMENT AKTİF!** 🤖
+
 Bu klasör Freqtrade botunu Linux sunucunda çalıştırmak için gerekli dosyaları içerir.
+GitHub'a push yaptığınızda sunucu otomatik güncellenir!
 
 ## Kurulum Adımları
 
