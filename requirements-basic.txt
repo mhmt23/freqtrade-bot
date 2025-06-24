@@ -1,0 +1,48 @@
+numpy==2.2.6
+pandas==2.3.0
+bottleneck==1.5.0
+numexpr==2.11.0
+# Indicator libraries (skip ta-lib for now)
+ft-pandas-ta==0.3.15
+# technical==1.5.1  # Commented out as it depends on TA-Lib
+
+ccxt==4.4.90
+cryptography==45.0.4
+aiohttp==3.12.13
+SQLAlchemy==2.0.41
+python-telegram-bot==22.1
+httpx>=0.24.1
+humanize==4.12.3
+cachetools==6.1.0
+requests==2.32.4
+urllib3==2.5.0
+certifi==2025.6.15
+jsonschema==4.24.0
+tabulate==0.9.0
+pycoingecko==3.2.0
+jinja2==3.1.6
+joblib==1.5.1
+rich==14.0.0
+pyarrow==20.0.0
+
+# Load ticker files 30% faster
+python-rapidjson==1.20
+# Properly format api responses
+orjson==3.10.18
+
+# Notify systemd
+sdnotify==0.3.2
+
+# API Server
+fastapi==0.115.13
+pydantic==2.11.7
+uvicorn==0.34.3
+pyjwt==2.10.1
+aiofiles==24.1.0
+psutil==7.0.0
+
+# Building config files interactively
+questionary==2.1.0
+prompt-toolkit==3.0.51
+# Extensions to datetime library
+python-dateutil==2.9.0.post0

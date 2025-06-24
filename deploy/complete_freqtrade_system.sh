@@ -5,7 +5,6 @@
 
 LOG_FILE="/home/dcoakelc/freqtrade_system.log"
 BOT_DIR="/home/dcoakelc/freqtrade-bot"
-WEB_DIR="/home/dcoakelc/public_html/freqtrade-bot"
 PID_FILE="$BOT_DIR/bot.pid"
 
 echo "========================================" >> $LOG_FILE
@@ -82,9 +81,21 @@ fi
 chmod +x *.sh
 echo "$(date): Dosya izinleri ayarlandı" >> $LOG_FILE
 
-# Web monitoring klasörünü oluştur
+# Web monitoring klasörünü kontrol et ve oluştur
+if [ -d "/home/dcoakelc/public_html" ] && [ "$(ls -A /home/dcoakelc/public_html)" ]; then
+    # public_html dolu ise alt klasör kullan
+    WEB_DIR="/home/dcoakelc/public_html/freqtrade-bot"
+    WEB_URL="http://akelclinics.com/freqtrade-bot/"
+    echo "$(date): public_html dolu, alt klasör kullanılıyor: $WEB_DIR" >> $LOG_FILE
+else
+    # public_html boş ise doğrudan ana domain'i kullan
+    WEB_DIR="/home/dcoakelc/public_html"
+    WEB_URL="http://akelclinics.com/"
+    echo "$(date): public_html boş, ana domain kullanılıyor: $WEB_DIR" >> $LOG_FILE
+fi
+
 mkdir -p "$WEB_DIR"
-echo "$(date): Web monitoring klasörü oluşturuldu: $WEB_DIR" >> $LOG_FILE
+echo "$(date): Web monitoring klasörü hazırlandı: $WEB_DIR" >> $LOG_FILE
 
 # Bot'u başlat
 echo "$(date): Freqtrade bot başlatılıyor..." >> $LOG_FILE
@@ -252,8 +263,8 @@ echo "$(date): ✅ Web monitoring sayfaları oluşturuldu" >> $LOG_FILE
 echo "========================================" >> $LOG_FILE
 echo "$(date): DEPLOYMENT TAMAMLANDI!" >> $LOG_FILE
 echo "📊 Bot Durumu: $BOT_STATUS_MSG" >> $LOG_FILE
-echo "🌐 Web Dashboard: http://akelclinics.com/freqtrade-bot/" >> $LOG_FILE
-echo "📋 Loglar: http://akelclinics.com/freqtrade-bot/logs.html" >> $LOG_FILE
+echo "🌐 Web Dashboard: $WEB_URL" >> $LOG_FILE
+echo "📋 Loglar: ${WEB_URL}logs.html" >> $LOG_FILE
 echo "💻 Web UI: http://akelclinics.com:8080" >> $LOG_FILE
 echo "📄 Log Dosyası: $LOG_FILE" >> $LOG_FILE
 echo "========================================" >> $LOG_FILE
