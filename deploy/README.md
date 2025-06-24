@@ -13,14 +13,32 @@ Bu repository, Binance Testnet üzerinde çalışan otomatik kripto para trading
 
 ## Hızlı Kurulum
 
+### 1. GitHub Bağlantı Testi (Önerilen)
+```bash
+cd /home/dcoakelc
+curl -O https://raw.githubusercontent.com/mhmt23/freqtrade-bot1/master/deploy/test_github_connection.sh
+chmod +x test_github_connection.sh
+./test_github_connection.sh
+```
+
+### 2. Ana Kurulum
+GitHub bağlantısı çalışıyorsa:
 ```bash
 # Ana dizine git
 cd /home/dcoakelc/
 
 # Kurulum scriptini indir ve çalıştır
-wget https://raw.githubusercontent.com/mhmt23/freqtrade-bot1/master/clean_install.sh
+curl -O https://raw.githubusercontent.com/mhmt23/freqtrade-bot1/master/deploy/clean_install.sh
 chmod +x clean_install.sh
 ./clean_install.sh
+```
+
+### 3. Sorun Giderme
+GitHub bağlantı sorunu yaşıyorsanız:
+```bash
+curl -O https://raw.githubusercontent.com/mhmt23/freqtrade-bot1/master/deploy/troubleshooting.sh
+chmod +x troubleshooting.sh
+./troubleshooting.sh
 ```
 
 ## Manuel Kurulum
