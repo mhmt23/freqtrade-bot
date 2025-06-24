@@ -61,7 +61,11 @@ freqtrade-bot1/
 ## Web Dashboard
 
 Bot çalıştıktan sonra web dashboard'a şu adresten erişebilirsiniz:
+
+**Not:** `public_html` klasörü boş olduğu için dashboard ana domain'e yerleştirildi.
+
 - **Ana Dashboard:** http://akelclinics.com/
+- **Log Görüntüleyici:** http://akelclinics.com/logs.html
 - **Detaylı Status:** http://akelclinics.com/status.php
 
 ## Konfigürasyon
