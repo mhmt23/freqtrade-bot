@@ -1,0 +1,17 @@
+freqtrade
+ccxt>=4.0.0
+numpy
+pandas
+scikit-learn
+joblib
+requests
+aiohttp
+fastapi
+uvicorn
+websockets
+colorama
+questionary
+prompt-toolkit
+tabulate
+ft-pandas-ta
+# TA-Lib alternative since compilation can be problematic on shared hosting

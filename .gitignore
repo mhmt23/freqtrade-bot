@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+
+# Process IDs
+*.pid
+
+# Config files with sensitive data
+config_local.json
+.env
+
+# Freqtrade specific
+user_data/data/
+user_data/logs/
+user_data/plot/
+user_data/notebooks/
+.hyperopt/
+
+# OS
+.DS_Store
+Thumbs.db
