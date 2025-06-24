@@ -1,6 +1,6 @@
 #!/bin/bash
 # FREQTRADE BOT KOMPLE DEPLOYMENT SİSTEMİ
-# GitHub: https://github.com/mhmt23/freqtrade-bot
+# GitHub: https://github.com/mhmt23/freqtrade-bot1
 # Otomatik kurulum, bot başlatma ve web monitoring
 
 LOG_FILE="/home/dcoakelc/freqtrade_system.log"
@@ -32,7 +32,7 @@ rm -rf "$BOT_DIR" mail freqtrade* bot*
 
 # Repository klonla
 echo "$(date): GitHub'dan freqtrade-bot klonlanıyor..." >> $LOG_FILE
-git clone https://github.com/mhmt23/freqtrade-bot.git "$BOT_DIR" >> $LOG_FILE 2>&1
+git clone https://github.com/mhmt23/freqtrade-bot1.git "$BOT_DIR" >> $LOG_FILE 2>&1
 
 if [ ! -d "$BOT_DIR" ]; then
     echo "$(date): HATA: Repository klonlanamadı!" >> $LOG_FILE
@@ -189,7 +189,7 @@ cat > "$WEB_DIR/index.html" << EOF
             
             <div class="card">
                 <h3>🔧 Sistem Bilgileri</h3>
-                <p><strong>Repository:</strong> github.com/mhmt23/freqtrade-bot</p>
+                <p><strong>Repository:</strong> github.com/mhmt23/freqtrade-bot1</p>
                 <p><strong>Auto-Deploy:</strong> Her 10 dakikada</p>
                 <p><strong>Log Dosyası:</strong> /home/dcoakelc/freqtrade_system.log</p>
             </div>
